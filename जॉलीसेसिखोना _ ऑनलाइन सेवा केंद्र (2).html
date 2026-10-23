@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>जॉलीसेसिखोना | ऑनलाइन सेवा केंद्र</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f8;--s:#fff;--ink:#1c2740;--mut:#55627c;--navy:#1b3f7a;--navy2:#13305f;--org:#f58220;--line:#d3dcec;--ok:#1b7a43;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1526;--s:#15213a;--ink:#e8eefb;--mut:#a5b4d0;--navy:#8bb4f5;--navy2:#0f2750;--org:#ffa044;--line:#283a5e;--ok:#5fd18c}}
+:root[data-theme="dark"]{--bg:#0d1526;--s:#15213a;--ink:#e8eefb;--mut:#a5b4d0;--navy:#8bb4f5;--navy2:#0f2750;--org:#ffa044;--line:#283a5e;--ok:#5fd18c}
+html{scroll-behavior:smooth;scroll-padding-top:56px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16.5px/1.6 'Hind','Noto Sans Devanagari',system-ui,sans-serif}
+.w{max-width:1100px;margin:0 auto;padding:0 16px}
+a{color:inherit}:focus-visible{outline:3px solid var(--org);outline-offset:2px}
+.top{background:var(--navy2);color:#dbe6fa;font-size:14px}
+.top .w{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:5px;padding-bottom:5px}
+.top a{text-decoration:none;margin-left:14px}
+header.hd{background:var(--s);border-bottom:4px solid var(--org)}
+header.hd .w{display:flex;align-items:center;gap:14px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.lg{width:64px;height:64px;border-radius:50%;border:2px solid var(--org)}
+.hd h1{margin:0;font-size:clamp(20px,3.6vw,28px);color:var(--navy);line-height:1.25}
+.hd small{display:block;color:var(--mut);font-size:14px}
+.hd .ph{margin-left:auto;text-align:right;font-size:14px;color:var(--mut)}
+.hd .ph b{display:block;font-size:20px;color:var(--navy)}
+nav{background:var(--navy2);position:sticky;top:0;z-index:5}
+nav .w{display:flex;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;padding:11px 16px;font-weight:500;font-size:15.5px}
+nav a:hover{background:#ffffff22}nav a.hl{background:var(--org);color:#1b1200;font-weight:700}
+.tick{background:var(--s);border-bottom:1px solid var(--line);font-size:15px}
+.tick .w{display:flex;gap:12px;align-items:center;padding-top:7px;padding-bottom:7px}
+.tick b{background:var(--org);color:#1b1200;padding:2px 10px;border-radius:4px;white-space:nowrap}
+.ban{background:linear-gradient(120deg,var(--navy2),#2a5aa8);color:#fff;padding:36px 0}
+.ban .w{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:start}
+.ban h2{font-size:clamp(26px,4.6vw,38px);line-height:1.3;margin:0 0 10px}
+.ban p{color:#d6e2fb;margin:0 0 16px}
+.btn{display:inline-block;border:0;cursor:pointer;font:600 16.5px 'Hind',sans-serif;padding:11px 20px;border-radius:5px;text-decoration:none;margin:0 8px 8px 0}
+.b1{background:var(--org);color:#1b1200}.b2{background:#25d366;color:#052e16}.b3{background:var(--navy);color:#fff}
+@media (prefers-color-scheme:dark){.b3{color:#06142e}}
+.form{background:var(--s);color:var(--ink);border-radius:8px;padding:18px;border-top:5px solid var(--org)}
+.form h3{margin:0 0 2px;font-size:20px;color:var(--navy)}.form p{margin:0 0 8px;color:var(--mut);font-size:14.5px}
+label{display:block;font-size:14.5px;font-weight:600;margin:9px 0 3px}
+input,select{width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--ink);font:inherit}
+.form .btn{width:100%;margin:12px 0 0}
+section{padding:36px 0}
+h2.t{font-size:clamp(22px,3.6vw,28px);margin:0 0 4px;color:var(--navy);padding-left:12px;border-left:5px solid var(--org)}
+.sub{color:var(--mut);margin:0 0 20px 17px}
+.ql{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.ql a{background:var(--s);border:1px solid var(--line);border-bottom:4px solid var(--navy);border-radius:6px;padding:14px 10px;text-align:center;text-decoration:none;font-weight:600}
+.ql a span{display:block;font-size:26px;line-height:1.2}.ql a em{display:block;font-style:normal;font-size:14px;color:var(--org)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.card{background:var(--s);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.card header{background:var(--navy2);color:#fff;padding:10px 14px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.card h3{margin:0;font-size:17.5px}
+.pr{background:var(--org);color:#1b1200;font-weight:700;padding:1px 10px;border-radius:99px;white-space:nowrap;font-size:15px}
+.card ul{margin:0;padding:12px 14px 4px 30px;color:var(--mut);font-size:15.5px}
+.card a{display:block;padding:8px 14px 12px;font-weight:600;color:var(--navy);text-decoration:none}
+.alt{background:var(--s);border-block:1px solid var(--line)}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:420px}
+th{background:var(--navy2);color:#fff;text-align:left}
+th,td{padding:10px 14px;border:1px solid var(--line)}
+td:last-child,th:last-child{text-align:right;white-space:nowrap}
+tbody tr:nth-child(even){background:var(--bg)}
+.calc{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
+.opt{display:flex;justify-content:space-between;gap:10px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:9px 12px;margin-bottom:7px;cursor:pointer}
+.opt span{display:flex;gap:10px;align-items:center}.opt input{width:auto}
+.res{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:16px}
+.res div{display:flex;justify-content:space-between;padding:4px 0}
+.res .tot{border-top:2px solid var(--line);margin-top:6px;padding-top:9px;font-size:20px;font-weight:700;color:var(--ok)}
+.cp{display:flex;gap:8px;margin:8px 0}.cp input{flex:1}.cp .btn{margin:0;padding:7px 14px}
+.ct{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.ct a{background:var(--s);border:1px solid var(--line);border-left:5px solid var(--org);border-radius:6px;padding:14px 16px;text-decoration:none}
+.ct small{display:block;color:var(--mut)}.ct b{color:var(--navy);font-size:19px;word-break:break-all}
+footer{background:var(--navy2);color:#c5d4f0;padding:28px 0 16px;font-size:14.5px}
+footer .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+footer h4{color:#fff;margin:0 0 6px}footer a{display:block;text-decoration:none}
+.note{border-top:1px solid #ffffff33;margin-top:16px;padding-top:10px;font-size:13.5px}
+@media (max-width:760px){.ban .w,.calc{grid-template-columns:1fr}.hd .ph{margin-left:0;text-align:left}}
+body{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}.bar{position:fixed;left:0;right:0;bottom:0;z-index:9;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:var(--navy2);box-shadow:0 -2px 10px #0004}.bar a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:11px 8px;border-radius:6px}.dt{background:var(--bg);border:1px solid var(--line);border-radius:6px;margin-bottom:10px}.dt summary{cursor:pointer;padding:12px 16px;font-weight:700;color:var(--navy);font-size:17.5px}.dt ul{margin:0;padding:0 18px 12px 36px;color:var(--mut)}.dt li{margin:4px 0}.dt li b{color:var(--ink)}.dt h4{margin:6px 16px 2px;color:var(--navy)}.dt p{margin:0 16px 10px;color:var(--mut)}.dt .tw{padding:0 16px 14px}.dt td{vertical-align:top}.dt td:last-child,.dt th:last-child{text-align:left;white-space:normal}.dt table{min-width:480px}.card a.ow{padding:0 14px 10px;font-weight:500;font-size:14.5px;color:var(--mut);text-decoration:underline}.card a.ow:last-child{padding-bottom:12px}.mq{overflow:hidden;flex:1;white-space:nowrap}.mq span{display:inline-block;padding-left:100%;animation:mq 22s linear infinite}@keyframes mq{to{transform:translateX(-100%)}}
+.form{animation:glow 2.6s ease-in-out infinite}@keyframes glow{0%,100%{box-shadow:0 0 0 0 #f5822066}50%{box-shadow:0 0 0 9px #f5822000,0 0 26px #f5822066}}
+.pulse{animation:pls 1.8s ease-in-out infinite}@keyframes pls{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.fbf{max-width:560px}.fbf textarea{width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--ink);font:inherit}
+.stars{display:flex;gap:6px}.stars button{background:none;border:0;cursor:pointer;font-size:38px;line-height:1;color:var(--line);padding:0 2px}.stars button.on{color:var(--org)}
+@media (prefers-reduced-motion:reduce){.mq span,.form,.pulse{animation:none}.mq span{padding-left:0;white-space:normal}.mq{white-space:normal}}
+
+/* सेवा कार्डवरील मदत करणाऱ्या महिलेचे चित्र */
+.service-visual{margin:12px 12px 2px;padding:8px 10px;background:linear-gradient(115deg,#fff7e9,#eaf3ff);border:1px solid #dce6f5;border-radius:10px;display:flex;align-items:center;gap:8px;min-height:108px;overflow:hidden}
+.service-visual svg{width:94px;min-width:94px;height:94px;display:block}
+.service-visual .visual-copy{font-size:14px;line-height:1.35;color:#173b73;font-weight:700}
+.service-visual .visual-copy span{display:block;margin-top:5px;background:#f58220;color:#231300;border-radius:5px;padding:4px 7px;text-align:center;font-size:12.5px}
+.card{transition:transform .18s ease,box-shadow .18s ease}.card:hover{transform:translateY(-3px);box-shadow:0 8px 20px #16345b18}
+@media(max-width:480px){.service-visual{min-height:96px}.service-visual svg{width:78px;min-width:78px;height:82px}.service-visual .visual-copy{font-size:13px}}
+
+.visual-copy a.vc-btn{display:block;margin-top:5px;background:#f58220;color:#231300;border-radius:5px;padding:6px 8px;text-align:center;font-size:13px;font-weight:700;text-decoration:none;transition:transform .15s,box-shadow .15s}.visual-copy a.vc-btn:hover{transform:translateY(-1px);box-shadow:0 3px 8px #0003}.card ul:last-child{padding-bottom:14px}.card ul+a.ow{padding-top:6px}#cbox[hidden]{display:none}</style>
+</head>
+<body>
+<div class="top"><div class="w"><span>जालना, महाराष्ट्र | सोम–शुक्र: संध्याकाळी ६ नंतर | शनि–रवि: सकाळी ९ ते रात्री ८</span><span><a href="mailto:jollysesikhona@gmail.com">ईमेल</a></span></div></div>
+
+<header class="hd"><div class="w">
+  <img class="lg" src="data:image/jpeg;base64,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" alt="जॉलीसेसिखोना लोगो" width="64" height="64">
+  <div><h1>जॉलीसेसिखोना</h1><small>EPF, ESIC व सरकारी कागदपत्रे – ऑनलाइन सेवा केंद्र</small></div>
+</div></header>
+
+<nav><div class="w">
+  <a href="#top">मुख्यपृष्ठ</a><a href="#services">सेवा</a><a href="#rates">दरपत्रक</a><a href="#info">सेवांची माहिती</a><a href="#about">आमच्याबद्दल</a><a href="#contact">संपर्क</a><a class="hl" href="#bk">काम बुक करा</a>
+</div></nav>
+
+<div class="tick offer"><div class="w"><b>सूचना</b><div class="mq"><span>पहिल्या २० ग्राहकांसाठी विशेष सवलत! कूपन कोड: FIRST20 &nbsp;&nbsp;•&nbsp;&nbsp; पहिल्या २० ग्राहकांसाठी विशेष सवलत! कूपन कोड: FIRST20</span></div></div></div>
+
+<div class="ban" id="top"><div class="w">
+  <div>
+    <h2>तुमच्या सर्व सरकारी आणि ऑनलाइन कागदपत्रांसाठी एकच ठिकाण</h2>
+    <p>UAN, KYC, PF क्लेम, ESIC, जन्म-मृत्यू दाखले, आयुष्मान कार्ड, मतदार ओळखपत्र आणि बरेच काही. ऑनलाइन सेवांपर्यंत पोहोचू न शकणाऱ्या लोकांसाठी मी हे काम करून देतो.</p>
+    
+  </div>
+  <form class="form" id="bk" onsubmit="return send(event)">
+    <h3>त्वरित काम बुक करा</h3><p>फॉर्म भरा, तो व्हॉट्सॲपवर माझ्याकडे येईल.</p>
+    <label for="n">पूर्ण नाव *</label><input id="n" required>
+    <label for="m">मोबाइल नंबर *</label><input id="m" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required>
+    <label for="s">आवश्यक सेवा *</label>
+    <select id="s" required><option value="">-- सेवा निवडा --</option><option>EPF / PF काम</option><option>ESIC काम</option><option>जन्म / मृत्यू दाखला अर्ज</option><option>जन्म / मृत्यू दाखला दुरुस्ती</option><option>आभा / आयुष्मान कार्ड</option><option>मतदार ओळखपत्र</option><option>महा आयडी</option><option>आधार / पॅन संबंधित काम</option><option>लॅमिनेशन</option><option>इतर ऑनलाइन कामे</option></select>
+    <button class="btn b3" type="submit">व्हॉट्सॲपवर पाठवा</button>
+  </form>
+</div></div>
+
+<section><div class="w">
+  <h2 class="t">जलद दुवे</h2><p class="sub">तुम्हाला हवी ती सेवा निवडा.</p>
+  <p style="text-align:center;margin:0 0 18px"><a class="btn b1 pulse" href="#bk" onclick="setTimeout(function(){n.focus()},600)">त्वरित काम बुक करा</a></p>
+  <div class="ql">
+    <a href="#services" onclick="pick('EPF / PF काम')"><span>🏦</span>EPF / PF</a>
+    <a href="#services" onclick="pick('ESIC काम')"><span>🏥</span>ESIC</a>
+    <a href="#services" onclick="pick('जन्म / मृत्यू दाखला अर्ज')"><span>📜</span>जन्म / मृत्यू दाखला</a>
+    <a href="#services" onclick="pick('आभा / आयुष्मान कार्ड')"><span>💳</span>आभा / आयुष्मान</a>
+    <a href="#services" onclick="pick('मतदार ओळखपत्र')"><span>🗳️</span>मतदार ओळखपत्र</a>
+    <a href="#services" onclick="pick('महा आयडी')"><span>🆔</span>महा आयडी</a>
+  </div>
+</div></section>
+
+<section class="alt" id="services"><div class="w">
+  <h2 class="t">आमच्या सेवा</h2><p class="sub">प्रत्येक सेवेसाठी योग्य मार्गदर्शन आणि जलद काम.</p>
+  <div class="grid">
+    <div class="card"><header><h3>EPF / PF काम</h3></header><div class="service-visual" role="img" aria-label="मैत्रीपूर्ण महिला काम बुक करा या बटणाकडे निर्देश करत आहे">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="59" cy="59" r="56" fill="#dcecff"/>
+        <circle cx="60" cy="39" r="22" fill="#263653"/>
+        <path d="M38 39c1-17 11-25 23-24 15 1 22 13 20 27l-7-9-5-8c-8 8-17 11-31 10z" fill="#263653"/>
+        <ellipse cx="60" cy="43" rx="16" ry="19" fill="#d99468"/>
+        <path d="M49 44q3-3 6 0M65 44q3-3 6 0" stroke="#392b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M55 52q5 5 10 0" stroke="#9b3e35" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M35 105q1-31 25-31t26 31" fill="#f58220"/>
+        <path d="M44 78l16 14 16-14" fill="#fff"/>
+        <path d="M39 83L25 68 16 60" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 60l-7-2 3 8 7 1" fill="#d99468"/>
+        <path d="M80 84l14-14 9-2" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M100 68l10-1-6 7-8 1" fill="#d99468"/>
+        <path d="M86 67h20" stroke="#f58220" stroke-width="3" stroke-linecap="round"/>
+        <path d="M102 62l7 5-7 5" fill="none" stroke="#f58220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="91" cy="20" r="10" fill="#fff"/><path d="M86 20l3 3 6-7" fill="none" stroke="#1b7a43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="visual-copy">तुमचे काम आम्ही सोपे करू!<a class="vc-btn" href="#bk" onclick="pick('EPF / PF काम');setTimeout(function(){n.focus()},600)">काम बुक करा →</a></div>
+    </div><ul><li>UAN ॲक्टिव्हेट करणे</li><li>PF शिल्लक तपासणे</li><li>KYC अपडेट</li><li>PF क्लेम करून देणे</li></ul><a class="ow" href="https://unifiedportal-mem.epfindia.gov.in/memberinterface/" target="_blank" rel="noopener">EPFO सदस्य पोर्टल: अधिकृत वेबसाईट</a></div>
+    <div class="card"><header><h3>ESIC काम</h3></header><div class="service-visual" role="img" aria-label="मैत्रीपूर्ण महिला काम बुक करा या बटणाकडे निर्देश करत आहे">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="59" cy="59" r="56" fill="#dcecff"/>
+        <circle cx="60" cy="39" r="22" fill="#263653"/>
+        <path d="M38 39c1-17 11-25 23-24 15 1 22 13 20 27l-7-9-5-8c-8 8-17 11-31 10z" fill="#263653"/>
+        <ellipse cx="60" cy="43" rx="16" ry="19" fill="#d99468"/>
+        <path d="M49 44q3-3 6 0M65 44q3-3 6 0" stroke="#392b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M55 52q5 5 10 0" stroke="#9b3e35" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M35 105q1-31 25-31t26 31" fill="#f58220"/>
+        <path d="M44 78l16 14 16-14" fill="#fff"/>
+        <path d="M39 83L25 68 16 60" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 60l-7-2 3 8 7 1" fill="#d99468"/>
+        <path d="M80 84l14-14 9-2" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M100 68l10-1-6 7-8 1" fill="#d99468"/>
+        <path d="M86 67h20" stroke="#f58220" stroke-width="3" stroke-linecap="round"/>
+        <path d="M102 62l7 5-7 5" fill="none" stroke="#f58220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="91" cy="20" r="10" fill="#fff"/><path d="M86 20l3 3 6-7" fill="none" stroke="#1b7a43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="visual-copy">तुमचे काम आम्ही सोपे करू!<a class="vc-btn" href="#bk" onclick="pick('ESIC काम');setTimeout(function(){n.focus()},600)">काम बुक करा →</a></div>
+    </div><ul><li>ESIC फाईल अपलोड</li><li>विमा क्लेम फाईल करणे</li><li>कुटुंबातील सदस्य जोडणे</li><li>लाभांची माहिती</li><li>कंपनीशी तक्रार निवारणात एजंट म्हणून मदत</li></ul><a class="ow" href="https://www.esic.gov.in/" target="_blank" rel="noopener">ESIC अधिकृत वेबसाईट: अधिकृत वेबसाईट</a></div>
+    <div class="card"><header><h3>जन्म / मृत्यू दाखला अर्ज</h3></header><div class="service-visual" role="img" aria-label="मैत्रीपूर्ण महिला काम बुक करा या बटणाकडे निर्देश करत आहे">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="59" cy="59" r="56" fill="#dcecff"/>
+        <circle cx="60" cy="39" r="22" fill="#263653"/>
+        <path d="M38 39c1-17 11-25 23-24 15 1 22 13 20 27l-7-9-5-8c-8 8-17 11-31 10z" fill="#263653"/>
+        <ellipse cx="60" cy="43" rx="16" ry="19" fill="#d99468"/>
+        <path d="M49 44q3-3 6 0M65 44q3-3 6 0" stroke="#392b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M55 52q5 5 10 0" stroke="#9b3e35" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M35 105q1-31 25-31t26 31" fill="#f58220"/>
+        <path d="M44 78l16 14 16-14" fill="#fff"/>
+        <path d="M39 83L25 68 16 60" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 60l-7-2 3 8 7 1" fill="#d99468"/>
+        <path d="M80 84l14-14 9-2" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M100 68l10-1-6 7-8 1" fill="#d99468"/>
+        <path d="M86 67h20" stroke="#f58220" stroke-width="3" stroke-linecap="round"/>
+        <path d="M102 62l7 5-7 5" fill="none" stroke="#f58220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="91" cy="20" r="10" fill="#fff"/><path d="M86 20l3 3 6-7" fill="none" stroke="#1b7a43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="visual-copy">तुमचे काम आम्ही सोपे करू!<a class="vc-btn" href="#bk" onclick="pick('जन्म / मृत्यू दाखला अर्ज');setTimeout(function(){n.focus()},600)">काम बुक करा →</a></div>
+    </div><ul><li>जन्म दाखल्याचा फॉर्म भरणे</li><li>मृत्यू दाखल्याचा फॉर्म भरणे</li><li>शासनाने बनवलेल्या दाखल्याची माहिती</li></ul><a class="ow" href="https://crsorgi.gov.in/" target="_blank" rel="noopener">CRS पोर्टल (जन्म-मृत्यू नोंदणी): अधिकृत वेबसाईट</a></div>
+    <div class="card"><header><h3>दाखला दुरुस्ती अर्ज</h3></header><div class="service-visual" role="img" aria-label="मैत्रीपूर्ण महिला काम बुक करा या बटणाकडे निर्देश करत आहे">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="59" cy="59" r="56" fill="#dcecff"/>
+        <circle cx="60" cy="39" r="22" fill="#263653"/>
+        <path d="M38 39c1-17 11-25 23-24 15 1 22 13 20 27l-7-9-5-8c-8 8-17 11-31 10z" fill="#263653"/>
+        <ellipse cx="60" cy="43" rx="16" ry="19" fill="#d99468"/>
+        <path d="M49 44q3-3 6 0M65 44q3-3 6 0" stroke="#392b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M55 52q5 5 10 0" stroke="#9b3e35" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M35 105q1-31 25-31t26 31" fill="#f58220"/>
+        <path d="M44 78l16 14 16-14" fill="#fff"/>
+        <path d="M39 83L25 68 16 60" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 60l-7-2 3 8 7 1" fill="#d99468"/>
+        <path d="M80 84l14-14 9-2" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M100 68l10-1-6 7-8 1" fill="#d99468"/>
+        <path d="M86 67h20" stroke="#f58220" stroke-width="3" stroke-linecap="round"/>
+        <path d="M102 62l7 5-7 5" fill="none" stroke="#f58220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="91" cy="20" r="10" fill="#fff"/><path d="M86 20l3 3 6-7" fill="none" stroke="#1b7a43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="visual-copy">तुमचे काम आम्ही सोपे करू!<a class="vc-btn" href="#bk" onclick="pick('जन्म / मृत्यू दाखला दुरुस्ती');setTimeout(function(){n.focus()},600)">काम बुक करा →</a></div>
+    </div><ul><li>जन्म दाखल्यातील दुरुस्ती</li><li>मृत्यू दाखल्यातील दुरुस्ती</li></ul><a class="ow" href="https://crsorgi.gov.in/" target="_blank" rel="noopener">CRS पोर्टल (जन्म-मृत्यू नोंदणी): अधिकृत वेबसाईट</a></div>
+    <div class="card"><header><h3>आभा / आयुष्मान कार्ड</h3></header><div class="service-visual" role="img" aria-label="मैत्रीपूर्ण महिला काम बुक करा या बटणाकडे निर्देश करत आहे">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="59" cy="59" r="56" fill="#dcecff"/>
+        <circle cx="60" cy="39" r="22" fill="#263653"/>
+        <path d="M38 39c1-17 11-25 23-24 15 1 22 13 20 27l-7-9-5-8c-8 8-17 11-31 10z" fill="#263653"/>
+        <ellipse cx="60" cy="43" rx="16" ry="19" fill="#d99468"/>
+        <path d="M49 44q3-3 6 0M65 44q3-3 6 0" stroke="#392b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M55 52q5 5 10 0" stroke="#9b3e35" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M35 105q1-31 25-31t26 31" fill="#f58220"/>
+        <path d="M44 78l16 14 16-14" fill="#fff"/>
+        <path d="M39 83L25 68 16 60" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 60l-7-2 3 8 7 1" fill="#d99468"/>
+        <path d="M80 84l14-14 9-2" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M100 68l10-1-6 7-8 1" fill="#d99468"/>
+        <path d="M86 67h20" stroke="#f58220" stroke-width="3" stroke-linecap="round"/>
+        <path d="M102 62l7 5-7 5" fill="none" stroke="#f58220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="91" cy="20" r="10" fill="#fff"/><path d="M86 20l3 3 6-7" fill="none" stroke="#1b7a43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="visual-copy">तुमचे काम आम्ही सोपे करू!<a class="vc-btn" href="#bk" onclick="pick('आभा / आयुष्मान कार्ड');setTimeout(function(){n.focus()},600)">काम बुक करा →</a></div>
+    </div><ul><li>कार्ड बनवून देणे</li><li>डाऊनलोड व प्रिंट</li></ul><a class="ow" href="https://abha.abdm.gov.in/" target="_blank" rel="noopener">आभा (ABHA) पोर्टल: अधिकृत वेबसाईट</a><a class="ow" href="https://beneficiary.nha.gov.in/" target="_blank" rel="noopener">आयुष्मान कार्ड पोर्टल: अधिकृत वेबसाईट</a></div>
+    <div class="card"><header><h3>मतदार ओळखपत्र</h3></header><div class="service-visual" role="img" aria-label="मैत्रीपूर्ण महिला काम बुक करा या बटणाकडे निर्देश करत आहे">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="59" cy="59" r="56" fill="#dcecff"/>
+        <circle cx="60" cy="39" r="22" fill="#263653"/>
+        <path d="M38 39c1-17 11-25 23-24 15 1 22 13 20 27l-7-9-5-8c-8 8-17 11-31 10z" fill="#263653"/>
+        <ellipse cx="60" cy="43" rx="16" ry="19" fill="#d99468"/>
+        <path d="M49 44q3-3 6 0M65 44q3-3 6 0" stroke="#392b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M55 52q5 5 10 0" stroke="#9b3e35" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M35 105q1-31 25-31t26 31" fill="#f58220"/>
+        <path d="M44 78l16 14 16-14" fill="#fff"/>
+        <path d="M39 83L25 68 16 60" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 60l-7-2 3 8 7 1" fill="#d99468"/>
+        <path d="M80 84l14-14 9-2" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M100 68l10-1-6 7-8 1" fill="#d99468"/>
+        <path d="M86 67h20" stroke="#f58220" stroke-width="3" stroke-linecap="round"/>
+        <path d="M102 62l7 5-7 5" fill="none" stroke="#f58220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="91" cy="20" r="10" fill="#fff"/><path d="M86 20l3 3 6-7" fill="none" stroke="#1b7a43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="visual-copy">तुमचे काम आम्ही सोपे करू!<a class="vc-btn" href="#bk" onclick="pick('मतदार ओळखपत्र');setTimeout(function(){n.focus()},600)">काम बुक करा →</a></div>
+    </div><ul><li>नवीन अर्ज</li><li>नाव / पत्ता दुरुस्ती</li></ul><a class="ow" href="https://voters.eci.gov.in/" target="_blank" rel="noopener">मतदार सेवा पोर्टल (ECI): अधिकृत वेबसाईट</a></div>
+    <div class="card"><header><h3>महा आयडी (MAHA ID)</h3></header><div class="service-visual" role="img" aria-label="मैत्रीपूर्ण महिला काम बुक करा या बटणाकडे निर्देश करत आहे">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="59" cy="59" r="56" fill="#dcecff"/>
+        <circle cx="60" cy="39" r="22" fill="#263653"/>
+        <path d="M38 39c1-17 11-25 23-24 15 1 22 13 20 27l-7-9-5-8c-8 8-17 11-31 10z" fill="#263653"/>
+        <ellipse cx="60" cy="43" rx="16" ry="19" fill="#d99468"/>
+        <path d="M49 44q3-3 6 0M65 44q3-3 6 0" stroke="#392b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M55 52q5 5 10 0" stroke="#9b3e35" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M35 105q1-31 25-31t26 31" fill="#f58220"/>
+        <path d="M44 78l16 14 16-14" fill="#fff"/>
+        <path d="M39 83L25 68 16 60" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 60l-7-2 3 8 7 1" fill="#d99468"/>
+        <path d="M80 84l14-14 9-2" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M100 68l10-1-6 7-8 1" fill="#d99468"/>
+        <path d="M86 67h20" stroke="#f58220" stroke-width="3" stroke-linecap="round"/>
+        <path d="M102 62l7 5-7 5" fill="none" stroke="#f58220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="91" cy="20" r="10" fill="#fff"/><path d="M86 20l3 3 6-7" fill="none" stroke="#1b7a43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="visual-copy">तुमचे काम आम्ही सोपे करू!<a class="vc-btn" href="#bk" onclick="pick('महा आयडी');setTimeout(function(){n.focus()},600)">काम बुक करा →</a></div>
+    </div><ul><li>महा आयडी संबंधित कामे</li><li>माहिती व मार्गदर्शन</li></ul><a class="ow" href="https://aaplesarkar.mahaonline.gov.in/" target="_blank" rel="noopener">आपले सरकार (MahaOnline): अधिकृत वेबसाईट</a></div>
+    <div class="card"><header><h3>आधार व पॅन काम</h3></header><div class="service-visual" role="img" aria-label="मैत्रीपूर्ण महिला काम बुक करा या बटणाकडे निर्देश करत आहे">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="59" cy="59" r="56" fill="#dcecff"/>
+        <circle cx="60" cy="39" r="22" fill="#263653"/>
+        <path d="M38 39c1-17 11-25 23-24 15 1 22 13 20 27l-7-9-5-8c-8 8-17 11-31 10z" fill="#263653"/>
+        <ellipse cx="60" cy="43" rx="16" ry="19" fill="#d99468"/>
+        <path d="M49 44q3-3 6 0M65 44q3-3 6 0" stroke="#392b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M55 52q5 5 10 0" stroke="#9b3e35" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M35 105q1-31 25-31t26 31" fill="#f58220"/>
+        <path d="M44 78l16 14 16-14" fill="#fff"/>
+        <path d="M39 83L25 68 16 60" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 60l-7-2 3 8 7 1" fill="#d99468"/>
+        <path d="M80 84l14-14 9-2" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M100 68l10-1-6 7-8 1" fill="#d99468"/>
+        <path d="M86 67h20" stroke="#f58220" stroke-width="3" stroke-linecap="round"/>
+        <path d="M102 62l7 5-7 5" fill="none" stroke="#f58220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="91" cy="20" r="10" fill="#fff"/><path d="M86 20l3 3 6-7" fill="none" stroke="#1b7a43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="visual-copy">तुमचे काम आम्ही सोपे करू!<a class="vc-btn" href="#bk" onclick="pick('आधार / पॅन संबंधित काम');setTimeout(function(){n.focus()},600)">काम बुक करा →</a></div>
+    </div><ul><li>आधार / पॅन संबंधित कामे</li><li>दर कामानुसार ठरतो</li></ul><a class="ow" href="https://uidai.gov.in/" target="_blank" rel="noopener">आधार (UIDAI): अधिकृत वेबसाईट</a><a class="ow" href="https://www.incometax.gov.in/" target="_blank" rel="noopener">आयकर विभाग (पॅन): अधिकृत वेबसाईट</a></div>
+    <div class="card"><header><h3>लॅमिनेशन</h3></header><div class="service-visual" role="img" aria-label="मैत्रीपूर्ण महिला काम बुक करा या बटणाकडे निर्देश करत आहे">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="59" cy="59" r="56" fill="#dcecff"/>
+        <circle cx="60" cy="39" r="22" fill="#263653"/>
+        <path d="M38 39c1-17 11-25 23-24 15 1 22 13 20 27l-7-9-5-8c-8 8-17 11-31 10z" fill="#263653"/>
+        <ellipse cx="60" cy="43" rx="16" ry="19" fill="#d99468"/>
+        <path d="M49 44q3-3 6 0M65 44q3-3 6 0" stroke="#392b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M55 52q5 5 10 0" stroke="#9b3e35" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M35 105q1-31 25-31t26 31" fill="#f58220"/>
+        <path d="M44 78l16 14 16-14" fill="#fff"/>
+        <path d="M39 83L25 68 16 60" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 60l-7-2 3 8 7 1" fill="#d99468"/>
+        <path d="M80 84l14-14 9-2" fill="none" stroke="#d99468" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M100 68l10-1-6 7-8 1" fill="#d99468"/>
+        <path d="M86 67h20" stroke="#f58220" stroke-width="3" stroke-linecap="round"/>
+        <path d="M102 62l7 5-7 5" fill="none" stroke="#f58220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="91" cy="20" r="10" fill="#fff"/><path d="M86 20l3 3 6-7" fill="none" stroke="#1b7a43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="visual-copy">तुमचे काम आम्ही सोपे करू!<a class="vc-btn" href="#bk" onclick="pick('लॅमिनेशन');setTimeout(function(){n.focus()},600)">काम बुक करा →</a></div>
+    </div><ul><li>कागदपत्रे व कार्ड लॅमिनेट करून देणे</li></ul></div>
+  </div>
+</div></section>
+
+<section id="rates"><div class="w">
+  <h2 class="t">दरपत्रक</h2><p class="sub">सेवा शुल्क. वेगळे शासकीय शुल्क असल्यास ते वेगळे.</p>
+  <div class="tw"><table>
+    <thead><tr><th>सेवा</th><th>दर</th></tr></thead>
+    <tbody>
+      <tr><td>लॅमिनेशन</td><td>₹२० ते ₹३०</td></tr>
+      <tr><td>आभा कार्ड / आयुष्मान कार्ड बनवून देणे</td><td>₹१००</td></tr>
+      <tr><td>EPF / PF काम</td><td>₹१५०</td></tr>
+      <tr><td>ESIC काम</td><td>₹१५०</td></tr>
+      <tr><td>जन्म / मृत्यू दाखला अर्ज</td><td>₹१००</td></tr>
+      <tr><td>जन्म / मृत्यू दाखला दुरुस्ती अर्ज</td><td>₹१००</td></tr>
+      <tr><td>मतदार ओळखपत्र</td><td>₹१२०</td></tr>
+      <tr><td>महा आयडी (MAHA ID)</td><td>₹१००</td></tr>
+      <tr><td>आधार व पॅन संबंधित कामे</td><td>₹१०० ते ₹२००</td></tr>
+    </tbody>
+  </table></div>
+  <p style="margin:18px 0 0"><button type="button" class="btn b1" id="ctog" aria-expanded="false" aria-controls="cbox">सेवा निवडा व एकूण दर पहा (कॅल्क्युलेटर)</button></p>
+  <div id="cbox" hidden>
+    <div class="calc" style="margin-top:10px">
+      <div>
+        <p style="margin:0 0 8px;font-weight:600">तुम्हाला हव्या असलेल्या सेवा निवडा:</p>
+        <div id="copts"></div>
+      </div>
+      <div class="res">
+        <div><span>एकूण दर</span><b id="ct0">₹0</b></div>
+        <div class="cp offer"><input id="ccoupon" placeholder="कूपन कोड (असल्यास)" aria-label="कूपन कोड"><button type="button" class="btn b1" id="capply">लागू करा</button></div>
+        <div class="offer"><span>ऑफर डिस्काउंट (30%)</span><b id="ct1">- ₹0</b></div>
+        <div class="tot"><span>अंतिम अंदाज</span><b id="ct2">₹0</b></div>
+        <label for="cname">पूर्ण नाव *</label><input id="cname">
+        <label for="cmob">मोबाइल नंबर *</label><input id="cmob" type="tel" inputmode="numeric" maxlength="10" pattern="[0-9]{10}">
+        <button type="button" class="btn b2" id="csend" style="width:100%;margin:12px 0 0">सबमिट करा (व्हॉट्सॲपवर पाठवा)</button>
+        <p style="margin:8px 0 0;color:var(--mut);font-size:14px">अंतिम दर काम पाहून ठरतात.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="about"><div class="w"><h2 class="t">आमच्याबद्दल</h2><p class="sub" style="max-width:46em">जॉलीसेसिखोना (JOLLYSESIKHONA) हे जालना येथील एक अग्रगण्य आणि विश्वासू EPF, ESIC व शासकीय कागदपत्रे ऑनलाईन सेवा केंद्र आहे. ज्या नागरिकांना स्वतः ऑनलाईन फॉर्म भरणे, कागदपत्रे डाऊनलोड करणे किंवा शासकीय पोर्टल हाताळणे कठीण जाते, त्यांच्यासाठी हे केंद्र अत्यंत सुलभ आणि जलद सेवा पुरवते.</p></div></section>
+
+<section id="contact"><div class="w">
+  <h2 class="t">संपर्क</h2><p class="sub">जालना, महाराष्ट्र | सोमवार ते शुक्रवार संध्याकाळी ६ नंतर, आणि शनिवार–रविवार सकाळी ९ ते रात्री ८ पर्यंत</p>
+  <div class="ct">
+    <a href="tel:+919511807597"><small>फोन</small><b>संपर्क करा</b></a>
+    <a href="https://wa.me/919511807597" rel="noopener"><small>व्हॉट्सॲप</small><b>संदेश पाठवा</b></a>
+    <a href="mailto:jollysesikhona@gmail.com"><small>ईमेल</small><b>jollysesikhona@gmail.com</b></a>
+  </div>
+</div></section>
+
+<section class="alt" id="info"><div class="w"><h2 class="t">सेवांची माहिती</h2><p class="sub">आमच्या केंद्रावर दिल्या जाणाऱ्या प्रमुख ऑनलाइन सेवा आणि त्यांतर्गत येणारी कामे.</p><details class="dt" open><summary>१. EPF / PF (भविष्य निर्वाह निधी) कामे</summary><ul><li><b>PF Advance / Full Withdrawal:</b> पीएफ खातेदाराचे पैसे काढणे (Advance किंवा अंतिम पैसे).</li><li><b>KYC Update:</b> पीएफ खात्याला बँक खाते, आधार आणि पॅन कार्ड लिंक करणे.</li><li><b>UAN Generation / Activation:</b> नवीन कर्मचाऱ्याचा UAN नंबर तयार करणे किंवा ॲक्टिव्हेट करणे.</li><li><b>Transfer Claim:</b> जुन्या कंपनीतील पीएफ नवीन कंपनीच्या खात्यात ट्रान्सफर करणे.</li><li><b>Profile / Date of Exit Update:</b> नाव, जन्मतारीख किंवा कंपनी सोडल्याची तारीख ऑनलाइन अपडेट करणे.</li><li><b>Passbook Download:</b> पीएफ पासबुक डाऊनलोड करणे आणि शिल्लक तपासणे.</li></ul></details><details class="dt"><summary>२. ESIC (कर्मचारी राज्य विमा) कामे</summary><ul><li><b>Pehchan Card Download:</b> कर्मचाऱ्याचे ESIC ई-पहचान कार्ड ऑनलाइन डाऊनलोड करणे.</li><li><b>Family / Dependent Update:</b> कुटुंबातील सदस्यांची नावे ESIC प्रोफाइलमध्ये जोडणे.</li><li><b>Dispensary / Hospital Change:</b> जवळचा दवाखाना किंवा रुग्णालय बदलणे.</li><li><b>Personal Details Update:</b> मोबाईल नंबर, पत्ता आणि बँक खात्याची माहिती अपडेट करणे.</li></ul></details><details class="dt"><summary>३. जन्म / मृत्यू दाखला अर्ज</summary><ul><li><b>New Application:</b> नवीन जन्म किंवा मृत्यू नोंदणी अर्ज दाखल करणे.</li><li><b>Certificate Download:</b> डिजिटल स्वाक्षरी असलेला मूळ दाखला डाऊनलोड व प्रिंट करणे.</li><li><b>Correction / Modification:</b> नावातील स्पेलिंग किंवा चुका दुरुस्तीसाठी अर्ज करणे.</li></ul><h4>नोंद कशी आणि कुठे करायची?</h4><p>जन्म किंवा मृत्यूची नोंद घटना घडल्यापासून २१ दिवसांच्या आत, त्या ठिकाणच्या स्थानिक निबंधकाकडे (ग्रामपंचायत / नगरपरिषद / महानगरपालिका) करावी. उशीर झाल्यास विलंब नोंदणीची प्रक्रिया लागते. ऑनलाइन अर्ज CRS पोर्टलवर करता येतो. आम्ही अर्ज भरून देण्यात मदत करतो.</p><div class="tw"><table><thead><tr><th>फॉर्म</th><th>कशासाठी</th></tr></thead><tbody><tr><td>Form 1 – जन्म अहवाल</td><td>नवीन बालकाच्या जन्माची नोंद करण्यासाठी (रुग्णालयात किंवा घरी झालेल्या जन्माची माहिती देण्यासाठी).</td></tr><tr><td>Form 5 – जन्म प्रमाणपत्र</td><td>बालकाच्या जन्मानंतर शासकीय कार्यालयाकडून दिला जाणारा अधिकृत जन्म दाखला.</td></tr><tr><td>Form 6 – मृत्यू प्रमाणपत्र</td><td>व्यक्तीच्या मृत्यूनंतर शासकीय कार्यालयाकडून दिला जाणारा अधिकृत मृत्यूचा दाखला.</td></tr><tr><td>Form 10 – Non-Availability Certificate (NAC)</td><td>जन्म किंवा मृत्यूची नोंद रेकॉर्डमध्ये सापडली नाही, तर तसे सांगणारे प्रमाणपत्र.</td></tr><tr><td>Form 14 – विलंब नोंदणी स्वघोषणापत्र</td><td>जन्म किंवा मृत्यूची नोंद उशिरा करायची असल्यास, विलंबाचे कारण स्पष्ट करणारे स्वतः स्वाक्षरी केलेले घोषणापत्र.</td></tr></tbody></table></div></details><details class="dt"><summary>४. आभा (ABHA) / आयुष्मान भारत कार्ड</summary><ul><li><b>ABHA Health ID Generation:</b> आधारशी लिंक करून नवीन आभा हेल्थ आयडी कार्ड तयार करणे.</li><li><b>Ayushman Bharat Card Apply:</b> ₹५ लाखांपर्यंत मोफत उपचारासाठी आयुष्मान भारत योजना कार्ड ऑनलाइन काढणे.</li><li><b>Card Download / Print:</b> आभा व आयुष्मान कार्ड डाऊनलोड करून कलर प्रिंट / लॅमिनेशन करणे.</li></ul></details><details class="dt"><summary>५. मतदार ओळखपत्र (Voter ID) कामे</summary><ul><li><b>New Voter Registration (Form 6):</b> नवीन मतदार नाव नोंदणी अर्ज करणे.</li><li><b>Correction in Voter ID (Form 8):</b> नावातील चूक, जन्मतारीख, फोटो किंवा पत्ता दुरुस्त करणे.</li><li><b>Address Transfer:</b> एका भागातून दुसऱ्या भागात मतदान केंद्र बदलणे.</li><li><b>Digital Voter ID (e-EPIC):</b> मोबाईल नंबर लिंक करून डिजिटल मतदार कार्ड डाऊनलोड करणे.</li></ul></details><details class="dt"><summary>६. आधार व पॅन संबंधित कामे</summary><ul><li><b>New PAN Card:</b> नवीन पॅन कार्डसाठी अर्ज करणे (Instant E-PAN किंवा NSDL / UTI द्वारे).</li><li><b>PAN Card Correction:</b> पॅन कार्डवरील नाव, जन्मतारीख किंवा फोटो दुरुस्त करणे.</li><li><b>PAN-Aadhaar Link:</b> पॅन आणि आधार कार्ड ऑनलाइन लिंक करणे.</li><li><b>Aadhaar Status / Download:</b> आधार अपडेट स्टेटस तपासणे व ई-आधार डाऊनलोड करणे.</li><li><b>Address Update in Aadhaar:</b> ऑनलाइन पुरावा किंवा HOF द्वारे आधारमधील पत्ता बदलणे.</li></ul></details><details class="dt"><summary>७. MAHA ID (महा आयडी) व इतर शासकीय ऑनलाइन कामे</summary><ul><li><b>MahaOnline Services:</b> उत्पन्न दाखला, रहिवासी दाखला, Non-Creamy Layer इत्यादींसाठी अर्ज.</li><li><b>Employment Exchange:</b> रोजगार आणि स्वयंरोजगार नोंदणी (MahaSwayam पोर्टल).</li><li><b>Scholarship Portal (MahaDBT):</b> विद्यार्थ्यांसाठी शिष्यवृत्तीचे ऑनलाइन अर्ज भरणे.</li><li><b>Citizen Services:</b> विविध शासकीय योजनांचे (उदा. लाडकी बहीण योजना, शेतकरी योजना) फॉर्म भरणे.</li></ul></details></div></section>
+
+<section class="alt" id="feedback"><div class="w">
+  <h2 class="t">तुमचा अभिप्राय द्या</h2><p class="sub">काम पूर्ण झाले का? तुमचे समाधान आणि प्रतिक्रिया आम्हाला कळवा.</p>
+  <form class="fbf" onsubmit="return fb(event)">
+    <label>तुम्ही किती समाधानी आहात? *</label>
+    <div class="stars" id="stars" role="group" aria-label="रेटिंग">
+      <button type="button" data-v="1" aria-label="१ तारा">★</button><button type="button" data-v="2" aria-label="२ तारे">★</button><button type="button" data-v="3" aria-label="३ तारे">★</button><button type="button" data-v="4" aria-label="४ तारे">★</button><button type="button" data-v="5" aria-label="५ तारे">★</button>
+    </div>
+    <label for="fn">तुमचे नाव</label><input id="fn">
+    <label for="fc">तुमची प्रतिक्रिया</label><textarea id="fc" rows="4" placeholder="काम कसे झाले? काही सुधारणा सुचवायच्या आहेत का?"></textarea>
+    <button class="btn b3" type="submit" style="margin-top:14px">अभिप्राय पाठवा</button>
+  </form>
+</div></section>
+
+<footer><div class="w">
+  <div class="g">
+    <div><h4>जॉलीसेसिखोना</h4>EPF, ESIC व ऑनलाइन सेवा केंद्र, जालना.</div>
+    <div><h4>सेवा</h4><a href="#services">EPF व ESIC</a><a href="#services">जन्म-मृत्यू दाखले</a><a href="#rates">दरपत्रक</a></div>
+    <div><h4>संपर्क</h4><a href="tel:+919511807597">संपर्क करा</a><a href="mailto:jollysesikhona@gmail.com">jollysesikhona@gmail.com</a></div>
+  </div>
+  <div class="note">© 2026 जॉलीसेसिखोना. ही खाजगी सेवा आहे. जे की लोकांपर्यन्त माहिती आणि योजना बद्दल माहिती देते, मदत करते. ही वेबसाईट EPFO, ESIC किंवा भारत सरकारची अधिकृत वेबसाईट नाही.</div>
+</div></footer>
+<div class="bar"><a class="b1" href="tel:+919511807597">📞 संपर्क करा</a><a class="b2" href="https://wa.me/919511807597" rel="noopener">💬 व्हॉट्सॲप</a></div>
+
+<script>
+function wa(t){window.open("https://wa.me/919511807597?text="+encodeURIComponent(t),"_blank","noopener")}
+function send(e){e.preventDefault();var name=document.getElementById("n").value;var mobile=document.getElementById("m").value;var service=document.getElementById("s").value;wa("नमस्कार! मला काम बुक करायचे आहे.\nनाव: "+name+"\nमोबाइल: "+mobile+"\nसेवा: "+service);return false}
+function pick(v){setTimeout(function(){s.value=v},0)}
+var OFFER_ON=true;
+if(!OFFER_ON)document.querySelectorAll(".offer").forEach(function(e){e.remove()});
+var rt=0;
+document.getElementById("stars").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;rt=+b.dataset.v;
+  this.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",+x.dataset.v<=rt)})});
+function fb(e){e.preventDefault();if(!rt){alert("कृपया तारे निवडून रेटिंग द्या.");return false}
+  wa("नमस्कार! माझा अभिप्राय:\nरेटिंग: "+rt+"/५\nनाव: "+(fn.value||"-")+"\nप्रतिक्रिया: "+(fc.value||"-"));return false}
+
+var CS=[["EPF / PF काम",150,150],["ESIC काम",150,150],["जन्म / मृत्यू दाखला अर्ज",100,100],["जन्म / मृत्यू दाखला दुरुस्ती अर्ज",100,100],["आभा / आयुष्मान कार्ड",100,100],["मतदार ओळखपत्र",120,120],["महा आयडी (MAHA ID)",100,100],["आधार / पॅन संबंधित काम",100,200],["लॅमिनेशन",20,30]],con=false;
+function cf(x){return "₹"+Math.round(x)}
+function cr(a,b){return a==b?cf(a):cf(a)+" ते "+cf(b)}
+copts.innerHTML=CS.map(function(x,i){return '<label class="opt"><span><input type="checkbox" data-i="'+i+'"> '+x[0]+'</span><b>'+cr(x[1],x[2])+'</b></label>'}).join("");
+function ccalc(){var a=0,b=0,nm=[];
+  copts.querySelectorAll("input:checked").forEach(function(c){var x=CS[c.dataset.i];a+=x[1];b+=x[2];nm.push(x[0])});
+  var k=con?0.7:1;ct0.textContent=cr(a,b);if(window.ct1)ct1.textContent="- "+(con?cr(a*.3,b*.3):"₹0");ct2.textContent=cr(a*k,b*k);
+  return {a:a,b:b,k:k,nm:nm}}
+copts.addEventListener("change",ccalc);
+ctog.onclick=function(){var o=cbox.hidden;cbox.hidden=!o;ctog.setAttribute("aria-expanded",o);if(o)cbox.scrollIntoView({behavior:"smooth",block:"nearest"})};
+if(window.capply)capply.onclick=function(){con=ccoupon.value.trim().toUpperCase()==="FIRST20";if(!con)alert("कूपन कोड बरोबर नाही.");ccalc()};
+csend.onclick=function(){var q=ccalc();
+  if(!q.nm.length){alert("कृपया किमान एक सेवा निवडा.");return}
+  if(!cname.value.trim()||!/^[0-9]{10}$/.test(cmob.value.trim())){alert("कृपया नाव आणि १० अंकी मोबाइल नंबर भरा.");return}
+  wa("नमस्कार! मला या सेवा हव्या आहेत:\nनाव: "+cname.value.trim()+"\nमोबाइल: "+cmob.value.trim()+"\nसेवा: "+q.nm.join(", ")+"\nएकूण दर: "+cr(q.a,q.b)+(con?"\nकूपन FIRST20 लागू\nअंतिम अंदाज: "+cr(q.a*q.k,q.b*q.k):""))};
+</script>
+</body>
+</html>
